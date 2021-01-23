@@ -4,7 +4,7 @@ from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 
 class Clientes(models.Model):
-    _name = 'examen3.Clientes'
+    _name = 'examen3.clientes'
     _description = 'Clientes'
 
     dni = fields.Integer(string="DNI",size = 9)
