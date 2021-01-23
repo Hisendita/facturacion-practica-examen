@@ -8,6 +8,7 @@ class Productos(models.Model):
     
     name = fields.Char(string="Nombre del producto")
     desc = fields.Html(string="Descripcion del producto")
-    pvp = fields.Float(string="Precio de venta", default="0,00")
+    pvp = fields.Float(string="Precio de venta")
+    
     
     
