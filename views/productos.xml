@@ -1,0 +1,74 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="examen3.productos_tree_list">
+      <field name="name">Productos</field>
+      <field name="model">examen3.Productos</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="desc"/>
+          <field name="pvp"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="examen3.productos_tree_form">
+      <field name="name">Productos</field>
+      <field name="model">examen3.Productos</field>
+      <field name="arch" type="xml">
+        <form string="Nueva Factura">
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="desc"/>
+              <field name="pvp"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="examen3.action_window_productos">
+      <field name="name">Productos</field>
+      <field name="res_model">examen3.Prodctos</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="examen3.action_server">
+      <field name="name">Examen3 server</field>
+      <field name="model_id" ref="model_examen3_examen3"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="Examen3" id="examen3.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="examen3.menu_1" parent="examen3.menu_root"/>
+    <menuitem name="Menu 2" id="examen3.menu_2" parent="examen3.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="examen3.menu_1_list" parent="examen3.menu_1"
+              action="examen3.action_window"/>
+    <menuitem name="Server to list" id="examen3" parent="examen3.menu_2"
+              action="examen3.action_server"/>
+-->
+  </data>
+</odoo>

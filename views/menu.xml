@@ -2,19 +2,20 @@
   <data>
     <!-- Top menu item -->
 
-    <menuitem name="Examen3" id="examen3.menu_root"/>
+    <menuitem name="Empresa" id="examen3.menu_root"/>
 
     <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="examen3.menu_1" parent="examen3.menu_root"/>
-    <menuitem name="Menu 2" id="examen3.menu_2" parent="examen3.menu_root"/>
--->
+
+    <menuitem name="Operaciones" id="examen3.menu_operaciones" parent="examen3.menu_root"/>
+
     <!-- actions -->
-<!--
-    <menuitem name="List" id="examen3.menu_1_list" parent="examen3.menu_1"
-              action="examen3.action_window"/>
-    <menuitem name="Server to list" id="examen3" parent="examen3.menu_2"
-              action="examen3.action_server"/>
--->
+
+    <menuitem name="Clientes" id="examen3.clientes_list" parent="examen3.menu_operaciones"
+              action="examen3.action_window_clientes"/>
+    <menuitem name="Facturas" id="examen3.facturas_list" parent="examen3.menu_operaciones"
+              action="examen3.action_window_facturas"/>
+    <menuitem name="Productos" id="examen3.productos_list" parent="examen3.menu_productos"
+              action="examen3.action_window_productos"/>
+    
   </data>
 </odoo>

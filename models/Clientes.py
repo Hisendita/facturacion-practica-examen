@@ -12,6 +12,7 @@ class Clientes(models.Model):
     surname = fields.Char(string="Apellidos")
     telefono = fields.Integer(string="Telefono", size=9)
     email = fields.Char(string="Email")
+    facturas = fields.One2many("examen3.Facturas","cliente", string="Facturas")
 
     @api.constrains("telefono")
     def check_phone_length(self):
@@ -19,7 +20,7 @@ class Clientes(models.Model):
             raise ValidationError("El campo Telefono tiene un formato incorrecto")
     @api.constrains("email")
     def check_email(self):
-        if "@" not in self.email:
+        if "@" and "." not in self.email:
             raise ValidationError("El campo Email tiene un formato incorrecto")
     @api.constrains("dni")
     def check_dni(self):
