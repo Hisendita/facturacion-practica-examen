@@ -3,7 +3,7 @@
     <!-- explicit list view definition -->
     <record model="ir.ui.view" id="examen3.productos_tree_list">
       <field name="name">Productos</field>
-      <field name="model">examen3.Productos</field>
+      <field name="model">examen3.productos</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
@@ -15,7 +15,7 @@
 
     <record model="ir.ui.view" id="examen3.productos_tree_form">
       <field name="name">Productos</field>
-      <field name="model">examen3.Productos</field>
+      <field name="model">examen3.productos</field>
       <field name="arch" type="xml">
         <form string="Nueva Factura">
           <sheet>
@@ -33,7 +33,7 @@
 
     <record model="ir.actions.act_window" id="examen3.action_window_productos">
       <field name="name">Productos</field>
-      <field name="res_model">examen3.Prodctos</field>
+      <field name="res_model">examen3.productos</field>
       <field name="view_mode">tree,form</field>
     </record>
 

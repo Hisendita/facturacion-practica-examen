@@ -1,5 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_examen3_examen3,examen3.examen3,model_examen3_examen3,base.group_user,1,1,1,1
-access_examen3_Clientes,examen3.Clientes,model_examen3_Clientes,,1,1,1,1
-access_examen3_Productos,examen3.Productos,model_examen3_Productos,,1,1,1,1
-access_examen3_Facturas,examen3.Facturas,model_examen3_Facturas,,1,1,1,1
+access_examen3_clientes,examen3.clientes,model_examen3_clientes,,1,1,1,1
+access_examen3_productos,examen3.productos,model_examen3_productos,,1,1,1,1
+access_examen3_facturas,examen3.facturas,model_examen3_facturas,,1,1,1,1
+access_examen3_detalle,examen.detalle,model_examen3_detalle,,1,1,1,1

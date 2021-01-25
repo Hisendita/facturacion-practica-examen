@@ -4,7 +4,7 @@
 
     <record model="ir.ui.view" id="examen3.detalle_tree_list">
       <field name="name">Detalles de Factura</field>
-      <field name="model">examen3.Detalle</field>
+      <field name="model">examen3.detalle</field>
       <field name="arch" type="xml">
         <tree>
           <field name="id_factura"/>
@@ -16,7 +16,7 @@
 
     <record model="ir.ui.view" id="examen3.detalle_tree_form">
       <field name="name">Detalles de Factura</field>
-      <field name="model">examen3.Detalle</field>
+      <field name="model">examen3.detalle</field>
       <field name="arch" type="xml">
         <form string="Nueva Factura">
           <sheet>
@@ -35,7 +35,7 @@
 
     <record model="ir.actions.act_window" id="examen3.action_window_detalle">
       <field name="name">Detalle de Factura</field>
-      <field name="res_model">examen3.Detalle</field>
+      <field name="res_model">examen3.detalle</field>
       <field name="view_mode">tree,form</field>
     </record>
 

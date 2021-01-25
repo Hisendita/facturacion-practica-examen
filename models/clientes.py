@@ -12,7 +12,7 @@ class Clientes(models.Model):
     surname = fields.Char(string="Apellidos")
     telefono = fields.Integer(string="Telefono", size=9)
     email = fields.Char(string="Email")
-    facturas = fields.One2many("examen3.Facturas","cliente", string="Facturas")
+    facturas = fields.One2many("examen3.facturas","cliente", string="Facturas")
 
     @api.constrains("telefono")
     def check_phone_length(self):

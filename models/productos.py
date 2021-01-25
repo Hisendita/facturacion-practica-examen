@@ -10,6 +10,6 @@ class Productos(models.Model):
     desc = fields.Html(string="Descripcion del producto")
     pvp = fields.Float(string="Precio de venta")
     cantidad = fields.Integer(string="Cantidad", default=1)
-    detalle = fields.One2many("examen3.Detalle", "id_productos", "Facturas")
+    detalle = fields.One2many("examen3.detalle", "id_producto", "facturas")
     
     

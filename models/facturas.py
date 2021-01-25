@@ -9,8 +9,8 @@ class Facturas(models.Model):
 
     referencia = fields.Integer(string="Referencia")
     fecha = fields.Datetime(string="Fecha", default=datetime.now())
-    cliente = fields.Many2one("examen3.Clientes", string="Cliente")
-    detalle = fields.One2many("examen3.Detalle", "id_factura", string="Factura")
+    cliente = fields.Many2one("examen3.clientes", string="Cliente")
+    detalle = fields.One2many("examen3.detalle", "id_factura", string="Factura")
     base = fields.Float(string="Base", compute="total_productos",store=True)
     iva = fields.Selection(selection=[("0","0"),("7","7"),("15","15"),("21","21")], default="21", string="IVA")
     total = fields.Float(string="Total",compute="precio_total",store=True)

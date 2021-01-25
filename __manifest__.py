@@ -27,6 +27,10 @@
         'views/views.xml',
         'views/templates.xml',
         'views/menu.xml',
+        'views/clientes.xml',
+        'views/detalle.xml',
+        'views/facturas.xml',
+        'views/productos.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import Clientes, Facturas, Productos
+from . import clientes, facturas, productos, detalle

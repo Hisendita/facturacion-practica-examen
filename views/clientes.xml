@@ -4,7 +4,7 @@
 
     <record model="ir.ui.view" id="examen3.clientes_list_tree">
       <field name="name">Clientes</field>
-      <field name="model">examen3.Clientes</field>
+      <field name="model">examen3.clientes</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
@@ -18,7 +18,7 @@
 
     <record model="ir.ui.view" id="examen3.clientes_list_form">
       <field name="name">Clientes</field>
-      <field name="model">examen3.Clientes</field>
+      <field name="model">examen3.clientes</field>
       <field name="arch" type="xml">
         <form string="Nuevo Cliente">
         <sheet>
@@ -40,7 +40,7 @@
 
     <record model="ir.actions.act_window" id="examen3.action_window_clientes">
       <field name="name">Clientes</field>
-      <field name="res_model">examen3.Clientes</field>
+      <field name="res_model">examen3.clientes</field>
       <field name="view_mode">tree,form</field>
     </record>
 
