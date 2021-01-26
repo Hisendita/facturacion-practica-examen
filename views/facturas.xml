@@ -6,7 +6,7 @@
       <field name="model">examen3.facturas</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="name"/>
+          <field name="referencia"/>
           <field name="fecha"/>
           <field name="base"/>
           <field name="iva"/>
@@ -22,18 +22,20 @@
         <form string = "Nueva Factura">
           <sheet>
             <group>
-              <field name="name"/>
+              <field name="referencia"/>
               <field name="fecha"/>
               <field name="cliente"/>
               <field name="base"/>
               <field name="iva"/>
               <field name="total"/>
               <field name="detalle"/>
+              <!-- 
                 <tree>
                   <field name="id_producto"/>
                   <field name="cantidad"/>
                 </tree>
-            </group>
+              -->
+              </group>
           </sheet>
         </form>
       </field>

@@ -11,17 +11,10 @@ class Facturas(models.Model):
     fecha = fields.Datetime(string="Fecha", default=datetime.now())
     cliente = fields.Many2one("examen3.clientes", string="Cliente")
     detalle = fields.One2many("examen3.detalle", "id_factura", string="Factura")
-    base = fields.Float(string="Base", compute="total_productos",store=True)
+    base = fields.Float(string="Base",store=True)
     iva = fields.Selection(selection=[("0","0"),("7","7"),("15","15"),("21","21")], default="21", string="IVA")
-    total = fields.Float(string="Total",compute="precio_total",store=True)
+    total = fields.Float(string="Total",store=True)
 
-    @api.depends("detalle")
-    def calcular_base(self):
-        self.ensure_one()
-        suma = 0
-        for i in self.detalle:
-            suma = suma + i.id_producto.pvp * i.cantidad
-        self.base = suma
     @api.depends("iva", "base")
     def calcular_iva(self):
         self.ensure_one()

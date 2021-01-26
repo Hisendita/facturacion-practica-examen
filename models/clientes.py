@@ -7,17 +7,14 @@ class Clientes(models.Model):
     _name = 'examen3.clientes'
     _description = 'Clientes'
 
-    dni = fields.Integer(string="DNI",size = 9)
+    dni = fields.Char(string="DNI", size=9)
     name = fields.Char(string="Nombre")
     surname = fields.Char(string="Apellidos")
-    telefono = fields.Integer(string="Telefono", size=9)
+    telefono = fields.Char(string="Telefono", size = 9)
     email = fields.Char(string="Email")
+    foto = fields.Binary()
     facturas = fields.One2many("examen3.facturas","cliente", string="Facturas")
 
-    @api.constrains("telefono")
-    def check_phone_length(self):
-        if len(self.telefono) < 9 or len(self.telefono) > 9:
-            raise ValidationError("El campo Telefono tiene un formato incorrecto")
     @api.constrains("email")
     def check_email(self):
         if "@" and "." not in self.email:
@@ -28,5 +25,5 @@ class Clientes(models.Model):
         letra = self.dni[-1]
         num = int(self.dni[:-1])
         if letras[num%23] != letra:
-            raise ValidationError("El DNI no es correcto.")
+            raise ValidationError("Error. DNI invalido.")
     

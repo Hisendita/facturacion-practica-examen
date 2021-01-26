@@ -26,9 +26,9 @@
             <field name="name"/>
             <field name="surname"/>
             <field name="dni"/>
-            <field name="foto" widget="image"/>
-            <field name="telefono" widget="phone"/>
-            <field name="email" widget="email"/>
+            <field name="foto"/>
+            <field name="telefono"/>
+            <field name="email"/>
             <field name="facturas"/>
           </group>
         </sheet>

@@ -9,10 +9,11 @@
     <menuitem name="Operaciones" id="examen3.menu_operaciones" parent="examen3.menu_root"/>
 
     <!-- actions -->
-
+    
     <menuitem name="Clientes" id="examen3.clientes_list" parent="examen3.menu_operaciones" action="examen3.action_window_clientes"/>
     <menuitem name="Facturas" id="examen3.facturas_list" parent="examen3.menu_operaciones" action="examen3.action_window_facturas"/>
     <menuitem name="Productos" id="examen3.productos_list" parent="examen3.menu_operaciones" action="examen3.action_window_productos"/>
     <menuitem name="Detalle" id="examen3.detalle_list" parent="examen3.menu_operaciones" action="examen3.action_window_detalle"/>
+      
   </data>
 </odoo>
